@@ -1,7 +1,7 @@
 const puppeteer = require('puppeteer');
 
-// target only passport board but working with any others.
-const baseUrl = 'https://audiovalley.atlassian.net/browse/PASSPORTV2'
+// target this url
+const baseUrl = 'jira url'
 
 // your jira credential 
 const cred = {
@@ -27,7 +27,7 @@ const goToUrl = async (page, address, wait = 'networkidle0') => {
 /*
     @param min - type Number => min value of ticket
     @param max - type Number => max value of ticket
-    example : https://audiovalley.atlassian.net/browse/PASSPORTV2-2690
+    example : https://www.xxx/browse/board-2690
 */
 (async (min, max) => {
   const browser = await puppeteer.launch();
